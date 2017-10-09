@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Guess What\'s Next</string>
+    <string name="action_settings">Settings</string>
+    <string name="Textview1"> </string>
+    <string name="Good_Game">Good Game!</string>
+    <string name="Cheers">Cheers everyone!</string>
+</resources>
