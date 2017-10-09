@@ -4,4 +4,5 @@
     <string name="Textview1"> </string>
     <string name="Good_Game">Good Game!</string>
     <string name="Cheers">Cheers everyone!</string>
+    <string name="Wrong_Answer">WRONG!!!</string>
 </resources>
