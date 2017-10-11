@@ -6,4 +6,5 @@
     <string name="Cheers">Cheers everyone!</string>
     <string name="Wrong_Answer">WRONG!!!</string>
     <string name="Higher">Higher</string>
+    <string name="Correct_Answer">CORRECT!!!</string>
 </resources>
