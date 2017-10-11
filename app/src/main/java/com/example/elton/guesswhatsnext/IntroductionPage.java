@@ -52,8 +52,15 @@ public class IntroductionPage extends AppCompatActivity {
 
         mButton = (Button) findViewById(R.id.button);
         rButton = (Button) findViewById(R.id.restartButton);
-        uButton = (Button) findViewById(R.id.button);
-        rButton = (Button) findViewById(R.id.restartButton);
+        uButton = (Button) findViewById(R.id.upButton);
+        dButton = (Button) findViewById(R.id.downButton);
+        eButton = (Button) findViewById(R.id.equalButton);
+        redButton = (Button) findViewById(R.id.redButton);
+        blackButton = (Button) findViewById(R.id.blackButton);
+        heartsButton = (Button) findViewById(R.id.heartsButton);
+        diamondsButton = (Button) findViewById(R.id.diamondsButton);
+        spadesButton = (Button) findViewById(R.id.spadesButton);
+        clubsButton = (Button) findViewById(R.id.clubsButton);
 
         mText = (TextView) findViewById(R.id.textView2);
         mSuits = (TextView) findViewById(R.id.suitsValue);
