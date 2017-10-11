@@ -21,11 +21,24 @@ import java.util.Collections;
 public class IntroductionPage extends AppCompatActivity {
 
     Button mButton;
+    Button rButton;
+    Button uButton;
+    Button dButton;
+    Button eButton;
+    Button redButton;
+    Button blackButton;
+    Button heartsButton;
+    Button diamondsButton;
+    Button spadesButton;
+    Button clubsButton;
+
+
     TextView mText;
     TextView mSuits;
     TextView mColors;
+
     ImageView mPicture;
-    Button rButton;
+
     int x=0;
     //int i = 0;
 
@@ -38,11 +51,15 @@ public class IntroductionPage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mButton = (Button) findViewById(R.id.button);
+        rButton = (Button) findViewById(R.id.restartButton);
+        uButton = (Button) findViewById(R.id.button);
+        rButton = (Button) findViewById(R.id.restartButton);
+
         mText = (TextView) findViewById(R.id.textView2);
         mSuits = (TextView) findViewById(R.id.suitsValue);
         mColors = (TextView) findViewById(R.id.colorsValue);
         mPicture = (ImageView) findViewById(R.id.cardPicture);
-        rButton = (Button) findViewById(R.id.restartButton);
+
 
         Cards h1 = new Cards(1, "hearts", "red", getDrawable(R.drawable.ace_of_hearts));
         Cards d1 = new Cards(1, "diamonds", "red", getDrawable(R.drawable.ace_of_diamonds));
