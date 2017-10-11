@@ -234,6 +234,57 @@ public class IntroductionPage extends AppCompatActivity {
             }
         });
 
+        uButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (x>0 && x < 52)
+                {
+                    if (CardDeck.get(x).number > CardDeck.get(x-1).number )
+                    {
+                        mText.setText(getString(R.string.Correct_Answer));
+                        mSuits.setText(String.valueOf(x));
+                        mColors.setText(String.valueOf(CardDeck.get(x).colors));
+                        mPicture.setImageDrawable(CardDeck.get(x).picture);
+                        //Collections.shuffle(CardDeck);
+                        x++;
+                    }
+                    else
+                    {
+                        mText.setText(getString(R.string.Wrong_Answer));
+                        mColors.setText(String.valueOf(CardDeck.get(x).colors));
+                        mPicture.setImageDrawable(CardDeck.get(x).picture);
+                        x++;
+                    }
+                }
+                else
+                {
+                    mText.setText(getString(R.string.Good_Game));
+                    mSuits.setText(getString(R.string.Textview1));
+                    mColors.setText(getString(R.string.Textview1));
+                    Collections.shuffle(CardDeck);
+                    x = 0;
+                }
+            }
+
+        });
+
+
+    }
+
+
+
+    public class Cards    {
+        public int number;
+        public String suits;
+        public String colors;
+        public Drawable picture;
+        Cards(int number,String suits,String colors, Drawable picture){
+            this.number=number;
+            this.suits=suits;
+            this.colors=colors;
+            this.picture=picture;
+        }
+
 
     }
 
@@ -254,21 +305,6 @@ public class IntroductionPage extends AppCompatActivity {
             CardDeck.add(c1);
         }
     }*/
-
-    public class Cards    {
-        public int number;
-        public String suits;
-        public String colors;
-        public Drawable picture;
-        Cards(int number,String suits,String colors, Drawable picture){
-            this.number=number;
-            this.suits=suits;
-            this.colors=colors;
-            this.picture=picture;
-        }
-
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
