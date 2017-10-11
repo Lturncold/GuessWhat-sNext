@@ -77,4 +77,86 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Up"
+        android:id="@+id/upButton"
+        android:layout_above="@+id/colorsValue"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Down"
+        android:id="@+id/downButton"
+        android:layout_below="@+id/suitsValue"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="RED"
+        android:id="@+id/redButton"
+        android:layout_above="@+id/colorsValue"
+        android:layout_toStartOf="@+id/restartButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Black"
+        android:id="@+id/blackButton"
+        android:layout_alignTop="@+id/downButton"
+        android:layout_alignStart="@+id/redButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="D"
+        android:id="@+id/diamondsButton"
+        android:layout_alignBottom="@+id/redButton"
+        android:layout_toEndOf="@+id/restartButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="H"
+        android:id="@+id/heartsButton"
+        android:layout_alignBottom="@+id/blackButton"
+        android:layout_toEndOf="@+id/restartButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="C"
+        android:id="@+id/clubsButton"
+        android:layout_alignBottom="@+id/diamondsButton"
+        android:layout_toEndOf="@+id/diamondsButton"
+        android:layout_marginStart="28dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="S"
+        android:id="@+id/spadesButton"
+        android:layout_alignBottom="@+id/heartsButton"
+        android:layout_alignStart="@+id/clubsButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="="
+        android:id="@+id/equalButton"
+        android:layout_alignBottom="@+id/redButton"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
