@@ -251,6 +251,7 @@ public class IntroductionPage extends AppCompatActivity {
                     else
                     {
                         mText.setText(getString(R.string.Wrong_Answer));
+                        mSuits.setText(String.valueOf(x));
                         mColors.setText(String.valueOf(CardDeck.get(x).colors));
                         mPicture.setImageDrawable(CardDeck.get(x).picture);
                         x++;
