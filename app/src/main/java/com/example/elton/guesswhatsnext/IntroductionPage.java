@@ -36,12 +36,13 @@ public class IntroductionPage extends AppCompatActivity {
     TextView mText;
     TextView mSuits;
     TextView mColors;
+    TextView mTitle;
 
     ImageView mPicture;
 
     int x=0;
     //int i = 0;
-
+    int y=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,8 @@ public class IntroductionPage extends AppCompatActivity {
         mText = (TextView) findViewById(R.id.textView2);
         mSuits = (TextView) findViewById(R.id.suitsValue);
         mColors = (TextView) findViewById(R.id.colorsValue);
+        mTitle = (TextView) findViewById(R.id.textView);
+
         mPicture = (ImageView) findViewById(R.id.cardPicture);
 
 
@@ -240,6 +243,46 @@ public class IntroductionPage extends AppCompatActivity {
                 if (x>0 && x < 52)
                 {
                     if (CardDeck.get(x).number > CardDeck.get(x-1).number )
+                    {
+                        mText.setText(getString(R.string.Correct_Answer));
+                        mSuits.setText(String.valueOf(x));
+                        mColors.setText(String.valueOf(CardDeck.get(x).colors));
+                        mPicture.setImageDrawable(CardDeck.get(x).picture);
+                        y++;
+                        mTitle.setText(String.valueOf(y));
+                        x++;
+                    }
+                    else
+                    {
+                        mText.setText(getString(R.string.Wrong_Answer));
+                        mSuits.setText(String.valueOf(x));
+                        mColors.setText(String.valueOf(CardDeck.get(x).colors));
+                        mPicture.setImageDrawable(CardDeck.get(x).picture);
+                        mTitle.setText(String.valueOf(y));
+                        x++;
+                        y=0;
+                    }
+                }
+                else
+                {
+                    mText.setText(getString(R.string.Good_Game));
+                    mSuits.setText(getString(R.string.Textview1));
+                    mColors.setText(getString(R.string.Textview1));
+                    mTitle.setText(R.string.Textview1);
+                    Collections.shuffle(CardDeck);
+                    x = 0;
+                    y=0;
+                }
+            }
+
+        });
+
+        dButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (x>0 && x < 52)
+                {
+                    if (CardDeck.get(x).number < CardDeck.get(x-1).number )
                     {
                         mText.setText(getString(R.string.Correct_Answer));
                         mSuits.setText(String.valueOf(x));
